@@ -8,12 +8,14 @@ import Button from '@mui/material/Button';
 
 
 const PersonalProjectsPage = () => {    
+
     const [projectInfo, setProjectInfo] = useState([]);
 
-    const [open, setOpen] = useState(false);  
+    const [isLoading, setIsLoading] = useState(false);
 
-    useEffect(() => {
-        axios.get("https://api.github.com/users/phuoctung28").then(resp => {
+    
+    const getData = async () => {
+        await axios.get("https://api.github.com/users/phuoctung28").then(resp => {
             setProjectInfo(
                 [
                     {
@@ -49,12 +51,13 @@ const PersonalProjectsPage = () => {
                     }
                 ]
             )
+            setIsLoading(true)
         })
-    },[])
-
-    while(!projectInfo) {
-        setOpen(true);
     }
+
+    useEffect(() => {
+        getData();
+    },[])
 
     return(
         <div>
@@ -67,17 +70,13 @@ const PersonalProjectsPage = () => {
                             <Project
                                 key = {index}
                                 data = {info}
+                                isLoading = {isLoading}
                             ></Project>
                         )
                     })}
                 </div>
             </div>
-            <Backdrop
-            sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
-            open={open}
-            >
-                <CircularProgress color="inherit" />
-            </Backdrop>
+
         </div>
     )
 }

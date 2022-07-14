@@ -1,3 +1,6 @@
+import { Skeleton } from "@mui/material";
+
+
 const Project = (props) => {
 
     const data = props.data;
@@ -47,7 +50,14 @@ const Project = (props) => {
                 </div>
                 <div className = "w-1/2">
                     {/* <img className = "" src = "/quiz.png"></img> */}
-                    <img className = "" src = {data.src}></img>
+                    {props.isLoading ? (
+                        <img className = "" src = {data.src}></img>
+                    ):
+                    (
+                        <Skeleton variant="rectangular" width={"100%"} height={"100%"} />
+                    )
+
+                    }
                     <div className = "flex">
                         <div className = "mt-10 mx-auto">
                             <a href = {data.demoLink} className = "px-6 py-3 border-2 hover:bg-gray-700 font-semibold">Live demo</a>
