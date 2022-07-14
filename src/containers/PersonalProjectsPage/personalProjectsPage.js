@@ -10,10 +10,9 @@ import Button from '@mui/material/Button';
 const PersonalProjectsPage = () => {    
     const [projectInfo, setProjectInfo] = useState([]);
 
-    const [open, setOpen] = useState(true);  
+    const [open, setOpen] = useState(false);  
 
     useEffect(() => {
-        const loading = setTimeout((setOpen(false)),1500);
         axios.get("https://api.github.com/users/phuoctung28").then(resp => {
             setProjectInfo(
                 [
@@ -52,6 +51,10 @@ const PersonalProjectsPage = () => {
             )
         })
     },[])
+
+    while(!projectInfo) {
+        setOpen(true);
+    }
 
     return(
         <div>
