@@ -1,4 +1,4 @@
-import { Skeleton } from "@mui/material";
+import Skeleton from 'react-loading-skeleton'
 
 
 const Project = (props) => {
@@ -31,12 +31,6 @@ const Project = (props) => {
                                 </ul> 
                             ) 
                         })}
-                        {/* <ul className = "list-disc ml-8">
-                            <li>Users with the highest scores and the best solving time would be placed accordingly on the leaderboard.</li>
-                        </ul>
-                        <ul className = "list-disc ml-8">
-                            <li>Designated codes to promote users to editors, granting the ability to edit questions</li>
-                        </ul> */}
                     </div>
                     {
                         data.collab && 
@@ -55,8 +49,11 @@ const Project = (props) => {
                     ):
                     (
                         <div>
-                            <Skeleton variant="rectangular" width={"100%"} height={"100%"} />
-
+                            asldkals;dl;sakd;asldksad// Five-line loading skeleton
+                            // Five-line loading skeleton// Five-line loading skeleton// Five-line loading skeleton
+                            // Five-line loading skeleton// Five-line loading skeleton// Five-line loading skeleton// Five-line loading skeleton
+                            // Five-line loading skeleton// Five-line loading skeleton// Five-line loading skeleton// Five-line loading skeleton
+                            <Skeleton count={5} /> 
                         </div>
                     )
 

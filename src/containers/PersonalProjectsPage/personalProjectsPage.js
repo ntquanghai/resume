@@ -48,7 +48,7 @@ const PersonalProjectsPage = () => {
                 ]
             )
             setIsLoading(true)
-        
+    
     }
 
     useEffect(() => {
