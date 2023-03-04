@@ -10,6 +10,9 @@ import {
   SiGmail,
   SiFacebook,
 } from "react-icons/si";
+import {
+  AiFillMail,
+} from "react-icons/ai"
 import { IoMdCall } from "react-icons/io";
 
 const Footer = () => {

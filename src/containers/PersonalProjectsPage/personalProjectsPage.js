@@ -4,6 +4,7 @@ import axios from "axios";
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
 import Button from '@mui/material/Button';
+import Skeleton from '@mui/material/Skeleton';
 
 
 
@@ -13,9 +14,7 @@ const PersonalProjectsPage = () => {
 
     const [isLoading, setIsLoading] = useState(false);
 
-    
     const getData = async () => {
-        await axios.get("https://api.github.com/users/phuoctung28").then(resp => {
             setProjectInfo(
                 [
                     {
@@ -44,15 +43,12 @@ const PersonalProjectsPage = () => {
                         src: "/academy.png",
                         demoLink: "https://storied-salamander-3aa3f9.netlify.app/",
                         repo: "https://github.com/ntquanghai/academyre",
-                        collab: {
-                            gitHub: "https://github.com/phuoctung28",
-                            name: resp.data.name,
-                        }
+
                     }
                 ]
             )
             setIsLoading(true)
-        })
+        
     }
 
     useEffect(() => {

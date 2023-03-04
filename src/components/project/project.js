@@ -54,7 +54,10 @@ const Project = (props) => {
                         <img className = "" src = {data.src}></img>
                     ):
                     (
-                        <Skeleton variant="rectangular" width={"100%"} height={"100%"} />
+                        <div>
+                            <Skeleton variant="rectangular" width={"100%"} height={"100%"} />
+
+                        </div>
                     )
 
                     }
