@@ -28,7 +28,7 @@ const HomePage = () => {
             </div>
             </Link>
 
-            <a target="_blank" href= "https://drive.google.com/file/d/1lyqi68nHT0TN9SanYma6Xjw0ulIDX7ta/view?usp=sharing" className = "text-xl text-white font-semibold hover:text-gray-300 cursor-pointer">
+            <a target="_blank" href= "https://drive.google.com/file/d/15Rrm1b_kFaBOVhCSVGOk-JyLDc0OFRbA/view?usp=sharing" className = "text-xl text-white font-semibold hover:text-gray-300 cursor-pointer">
                   View my CV
             </a>        
         </div>
