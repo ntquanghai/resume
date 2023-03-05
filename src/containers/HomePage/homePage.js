@@ -27,9 +27,10 @@ const HomePage = () => {
                 View my profile
             </div>
             </Link>
-            <div className = "text-xl text-white font-semibold hover:text-gray-300 cursor-pointer">
-                  Download my CV
-            </div>        
+
+            <a target="_blank" href= "https://drive.google.com/file/d/1lyqi68nHT0TN9SanYma6Xjw0ulIDX7ta/view?usp=sharing" className = "text-xl text-white font-semibold hover:text-gray-300 cursor-pointer">
+                  View my CV
+            </a>        
         </div>
         </div>
       </div>

@@ -1,10 +1,27 @@
-import { SiJavascript, SiHtml5, SiCss3, SiReact, SiGithub } from 'react-icons/si'
+import { SiJavascript, SiHtml5, SiCss3, SiReact, SiGithub, SiPython, SiMysql } from 'react-icons/si'
+import { FaJava } from 'react-icons/fa'
+
 const SkillPage = () => {
     return(
-        <div className = "mt-40 text-white w-1/2 mx-auto">
+        <div className = "mt-40 text-white w-3/4 mx-auto">
             <div className ="flex-grow flex flex-col">
                 <div className = "text-4xl font-extrabold text-center uppercase">SKILLS</div>
                 <div className = "mt-8 text-2xl mx-auto">
+                    <div className = "flex mb-8">
+                        <SiPython className = "w-8 h-8 "></SiPython>
+                        <div className = "font-bold ml-4"> Python:</div>
+                        <div className = "ml-2 font-thin">Basic understanding of Java's syntax and Data-related libraries (Python (pandas, NumPy, Scikit-learn, Matplotlib, Seaborn))</div>
+                    </div>
+                    <div className = "flex mb-8">
+                        <FaJava className = "w-8 h-8 "></FaJava>
+                        <div className = "font-bold ml-4"> Java:</div>
+                        <div className = "ml-2 font-thin">Basic understanding of Java's syntax and Object Oriented Programming</div>
+                    </div>
+                    <div className = "flex mb-8">
+                        <SiMysql className = "w-8 h-8 "></SiMysql>
+                        <div className = "font-bold ml-4"> MySQL:</div>
+                        <div className = "ml-2 font-thin">Basic understanding of MySQL</div>
+                    </div>
                     <div className = "flex mb-8">
                         <SiHtml5 className = "w-8 h-8 text-orange-400 "></SiHtml5>
                         <div className = "font-bold ml-4"> HTML5:</div>
